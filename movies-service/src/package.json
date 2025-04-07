@@ -1,0 +1,22 @@
+{
+  "name": "movies-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r dotenv-safe/config index.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "dotenv-safe": "^9.1.0",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "mongodb": "^6.15.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
