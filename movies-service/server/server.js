@@ -4,7 +4,7 @@ const helmet = require('helmet');
 
 let server = null;
 
-async function start() {
+async function start(api, repository) {
     const app = express();
 
     app.use(morgan('dev'));
@@ -14,6 +14,8 @@ async function start() {
     app.get('/health', (req, res) => {
         res.send('OK');
     });
+
+    api(app, repository);
 
     app.use((error, req, res, next) => {
         console.error(error);
